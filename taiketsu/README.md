@@ -1,24 +1,24 @@
 # README
+## topicテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+|Column|Type|Options|
+|------|----|-------|
+|topic_id|integer|null: false, foreign_key: true|
+|topic_title|string|null: false, foreign_key: false|
 
-Things you may want to cover:
 
-* Ruby version
+### Association
+- has_many :comments
 
-* System dependencies
+## commentテーブル
 
-* Configuration
+|Column|Type|Options|
+|------|----|-------|
+|comment_id|integer|null: false, foreign_key: true|
+|comment_content|string|null: false, foreign_key: false|
+|good_count|integer|null: false, foreign_key: false|
+|bad_count|integer|null: false, foreign_key: false|
+|which|integer|null: false, foreign_key: false|
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+- belongs_to :topic
