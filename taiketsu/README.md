@@ -8,7 +8,7 @@
 
 
 ### Association
-- has_many :comment
+- has_many :comments
 
 ## commentテーブル
 
